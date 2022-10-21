@@ -27,13 +27,13 @@ sequelize db:migrate
 Perintah untuk melakukan penambahan data super admin
 
 ```sh
-sequelize db:seed
+sequelize db:seed:all
 ```
 
 Perintah untuk menjalankan development server dengan salah satu script di package.json, yang namanya `develop`.
 
 ```sh
-npm develop
+npm run develop
 ```
 
 Data super admin untuk login
