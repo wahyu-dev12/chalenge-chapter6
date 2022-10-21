@@ -36,7 +36,7 @@ module.exports = {
     await queryInterface.addColumn("Cars", "createdBy", {
       type: Sequelize.INTEGER,
     });
-    await queryInterface.addColumn("Cars", "updateBy", {
+    await queryInterface.addColumn("Cars", "updatedBy", {
       type: Sequelize.INTEGER,
     });
     await queryInterface.addColumn("Cars", "deletedBy", {
