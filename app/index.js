@@ -7,9 +7,13 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors")
 const router = require("../config/routes");
-
+const yaml = require("yamljs")
+const swaggerUi = require("swagger-ui-express")
+const openapi = yaml.load('./openapi.yaml')
 
 const app = express();
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapi));
 
 /** Install request logger */
 app.use(morgan("dev"));
