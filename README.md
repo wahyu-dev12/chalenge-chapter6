@@ -43,3 +43,8 @@ Data super admin untuk login
 "encryptedPassword": "adminsuper"
 ```
 
+API Document
+```js
+http://localhost:8046/api-docs
+```
+
