@@ -14,7 +14,7 @@ apiRouter.get("/api/v1/cars", controllers.api.v1.carsController.listAvailable)
 apiRouter.post("/api/v1/cars", controllers.api.v1.authController.authorize, validator, controllers.api.v1.carsController.create)
 
 // get all cars
-apiRouter.get("/api/v1/cars/all", controllers.api.v1.carsController.list)
+apiRouter.get("/api/v1/cars/all", controllers.api.v1.authController.authorize, controllers.api.v1.carsController.list)
 
 apiRouter.put("/api/v1/cars/:id", controllers.api.v1.authController.authorize, validator, controllers.api.v1.carsController.update)
 apiRouter.get("/api/v1/cars/:id", controllers.api.v1.carsController.show)

@@ -41,7 +41,7 @@ module.exports = {
             where: {
                 [Op.and]: [
                     {
-                        delFlage: true
+                        available: true
                     },
                     {
                         [Op.or]: [

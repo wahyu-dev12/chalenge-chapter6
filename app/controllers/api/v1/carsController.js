@@ -2,7 +2,14 @@ const carsService = require("../../../services/carsService")
 const cloudinary = require("../../../../cloudinary")
 
 module.exports = {
-    list(req, res) {
+    async list(req, res) {
+        const isAdmin = await req.user.role
+
+        if (isAdmin === "member") {
+            res.status(401).json({ message: "Danger area, not user access zone" })
+            return
+        }
+
         carsService.list()
             .then(({ data, count }) => {
                 res.status(200).json({

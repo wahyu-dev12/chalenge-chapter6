@@ -1,24 +1,45 @@
-# Binar: Express.js
+# Challenge 06 Cars API
 
-Repository ini ditujukan sebagai boilerplate dalam membuat sebuah HTTP Server menggunakan Express.js
-Repository ini menggunakan Service Repository Pattern, yang artinya di dalam repository ini terdapat modul model, controller, service, dan repository.
+- Repository ini ditujukan sebagai boilerplate dalam membuat sebuah HTTP Server menggunakan Express.js 
+<br />
+- Repository ini menggunakan Service Repository Pattern, yang artinya di dalam repository ini terdapat modul model, controller, service, dan repository.
 
 ## Getting Started
 
-Untuk mulai membuat sebuah implementasi dari HTTP Server, mulainya menginspeksi file [`app/index.js`](./app/index.js), dan lihatlah salah satu contoh `controller` yang ada di [`app/controllers/mainController.js`](./app/controllers/mainController.js)
-
-Lalu untuk menjalankan development server, kalian tinggal jalanin salah satu script di package.json, yang namanya `develop`.
+Perintah untuk menginstall dependencies yang digunakan 
 
 ```sh
-yarn develop
+npm i atau npm install
 ```
 
-## Database Management
+Perintah untuk membuat database
 
-Di dalam repository ini sudah terdapat beberapa script yang dapat digunakan dalam memanage database, yaitu:
+```sh
+sequelize db:create
+```
 
-- `yarn db:create` digunakan untuk membuat database
-- `yarn db:drop` digunakan untuk menghapus database
-- `yarn db:migrate` digunakan untuk menjalankan database migration
-- `yarn db:seed` digunakan untuk melakukan seeding
-- `yarn db:rollback` digunakan untuk membatalkan migrasi terakhir
+Perintah untuk melakukan migrate yang berfungsi untuk membuat atau perubahan pada tabel-tabel di database
+
+```sh
+sequelize db:migrate
+```
+
+Perintah untuk melakukan penambahan data super admin
+
+```sh
+sequelize db:seed
+```
+
+Perintah untuk menjalankan development server dengan salah satu script di package.json, yang namanya `develop`.
+
+```sh
+npm develop
+```
+
+Data super admin untuk login
+
+```json
+"email": "adminsuper@email.com",
+"encryptedPassword": "adminsuper"
+```
+
